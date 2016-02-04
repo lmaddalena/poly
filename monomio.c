@@ -123,7 +123,9 @@ char *monomio_tostring(t_monomio *mon){
 	//grado
 	int g = abs(mon->grado);
 	char grado[20];
-	itoa(g, grado, 10);
+	//itoa(g, grado, 10);
+	sprintf(grado, "%d", g);
+	
 	if (g > 1)
 	{
 		strcat(s, "x^");

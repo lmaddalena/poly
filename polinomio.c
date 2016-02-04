@@ -78,8 +78,8 @@ t_polinomio *polinomio_creatrinomio(double a, double b, double c) {
 //
 void polinomio_radicitrinomio(double a, double b, double c, double radici[2], int *flgx1, int *flgx2) {
 
-	*flgx1 = 0;		// flag che cindica se è stato calcolato il valore della prima radice (x1)
-	*flgx2 = 0;		// flag che cindica se è stato calcolato il valore della seconda radice (x1)
+	*flgx1 = 0;		// flag che cindica se Ã¨ stato calcolato il valore della prima radice (x1)
+	*flgx2 = 0;		// flag che cindica se Ã¨ stato calcolato il valore della seconda radice (x1)
 
 	if (a == 0)
 	{
@@ -171,14 +171,14 @@ t_polinomio *polinomio_normalizza(t_polinomio *pol) {
 		}
 		pol_norm->list->__iterator = NULL;
 
-		// se il coefficente è diverso da zero, aggiungo il monomio alla lista
+		// se il coefficente ï¿½ diverso da zero, aggiungo il monomio alla lista
 		if (mon->coefficiente != 0)
 			monomiolist_add(pol_norm->list, mon);
 		else
 			monomio_dtor(mon);
 	}
 
-	// se il polinomio è vuoto aggiungo zero
+	// se il polinomio ï¿½ vuoto aggiungo zero
 	if (pol_norm->list->item == NULL)
 	{
 		mon = monomio_ctor();
@@ -327,8 +327,8 @@ t_polinomiolist *polinomio_dividi(t_polinomio *pol1, t_polinomio *pol2) {
 
 		while (polinomio_getgrado(r) >= polinomio_getgrado(divisore) && r->list->item->monomio->coefficiente != 0)
 		{
-			a = divisore->list->item->monomio; 	// monomio di grado più elevato
-			b = r->list->item->monomio;			// monomio di grado più elevato
+			a = divisore->list->item->monomio; 	// monomio di grado piï¿½ elevato
+			b = r->list->item->monomio;			// monomio di grado piï¿½ elevato
 			c = monomio_dividi(b, a);			// divide
 
 			
