@@ -1,4 +1,4 @@
-fibo: poly.o polinomio.o monomio.o
+poly: poly.o polinomio.o monomio.o
 	gcc -std=c99 poly.o polinomio.o monomio.o -o poly -lm
 
 poly.o : ../poly.h ../poly.c
