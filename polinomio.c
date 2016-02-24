@@ -32,6 +32,9 @@ char *polinomio_tostring(t_polinomio *pol) {
 		len += strlen(monomio_tostring(item));
 	}
 
+    // spazio per \0
+    len++;
+    
 	// alloca
 	char *s = (char*)malloc(len);
 
