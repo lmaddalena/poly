@@ -106,7 +106,13 @@ char *monomio_tostring(t_monomio *mon){
 		strcpy(s, "+");
 
 	// coefficiente
-	double c = abs(mon->coefficiente);
+    double c;
+    if(mon->coefficiente < 0)
+        c = mon->coefficiente * -1;
+    else
+        c = mon->coefficiente;
+
+    
 	if (c != 1 || mon->grado == 0)
 	{
 		char coeff[20];
